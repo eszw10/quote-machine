@@ -1,0 +1,76 @@
+#quote-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px 50px;
+    border-radius: 8px;
+    background-color: #242424;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    ;
+
+    #text-container {
+        display: flex;
+        gap: 3px;
+    }
+
+    .fa-quote-left {
+        font-size: 30px;
+    }
+
+    #text {
+        font-weight: 600;
+        color: #ffffff;
+        font-size: 30px;
+    }
+
+    #author {
+        font-style: italic;
+        font-size: 20px;
+        align-self: flex-end;
+    }
+
+    .btn-container {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .fa-x-twitter {
+        color: #ffffff;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    #quote-box {
+        width: 60%;
+        padding: 20px;
+
+        .fa-quote-left {
+            font-size: 20px;
+        }
+
+        #text {
+            font-weight: 600;
+            color: #ffffff;
+            font-size: 20px;
+        }
+
+        #author {
+            font-size: 15px;
+        }
+
+        button { 
+            padding: 0.6em 1.2em;
+            font-size: 0.8em;
+            font-weight: 500;
+            font-family: inherit;
+            background-color: #1a1a1a;
+            cursor: pointer;
+            transition: border-color 0.25s;
+        }
+    }
+
+}
