@@ -3,12 +3,10 @@ import './quotes.scss';
 import quotesData from './quotesData';
 
 const Quotes = () => {
-    const randomQuotes = quotesData[Math.floor(Math.random() * quotesData.length)];
-    const [quotes, setQuotes] = useState(randomQuotes)
-    const generatedQuotes = () => {
-        setQuotes(randomQuotes);
-    };
-    
+    const generateRandomQuote = () => {
+        return quotesData[Math.floor(Math.random() * quotesData.length)];
+    }
+    const [quotes, setQuotes] = useState(generateRandomQuote())
     return (
         <div id="quote-box">
             <div id="text-container">
@@ -20,7 +18,7 @@ const Quotes = () => {
                 <button>
                     <a href="https://twitter.com/intent/tweet" target="_blank" id="tweet-quote"><i className="fa-brands fa-x-twitter"></i></a>
                 </button>
-                <button onClick={generatedQuotes} id="new-quote">New Quote</button>
+                <button onClick={() => setQuotes(generateRandomQuote())} id="new-quote">New Quote</button>
             </div>
         </div>
     );
